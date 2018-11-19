@@ -1,0 +1,22 @@
+struct timeval startTime, endTime;
+float* in = (float*) malloc(n*n*sizeof(float));
+float* out = (float*) malloc(n*n*sizeof(float));
+
+srand(time(NULL));
+for(int i = 0; i < n; i++) {
+  for(int j = 0; j < n; j++) {
+    in[(i*n) + j] = (float)((20000*(rand()/(float)
+  }
+}
+gettimeofday(&startTime, NULL);
+
+for(int i = 0; i<n; i += b) {
+    for (int j =0; j< n; j+=b) {
+        for (k = i; k < (i + b); k++){
+            for(int l = j; l < (j+b); l++){
+                out[(l*n) + k] = in[(k*n) + l];
+            }
+        }
+    }
+}
+
